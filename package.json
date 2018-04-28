@@ -1,0 +1,56 @@
+{
+  "name": "react-router-dynamic-import",
+  "version": "1.0.0",
+  "description": "dynamic import test",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "mocha",
+    "dev": "webpack-dev-server --inline --content-base .",
+    "start": "rimraf dist && webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThreeGuns/react-router-dynamic-import.git"
+  },
+  "keywords": [
+    "react-router",
+    "dynamic",
+    "import",
+    "react-loadable",
+    "babel-plugin-syntax-dynamic-import"
+  ],
+  "author": "cailong1028",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ThreeGuns/react-router-dynamic-import/issues"
+  },
+  "homepage": "https://github.com/ThreeGuns/react-router-dynamic-import#readme",
+  "babel": {
+    "presets": [
+      "react",
+      "env"
+    ],
+    "plugins": [
+      "syntax-dynamic-import"
+    ]
+  },
+  "dependencies": {
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-loadable": "^5.3.1",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "html-webpack-plugin": "^3.2.0",
+    "rimraf": "^2.6.2",
+    "webpack": "^4.6.0",
+    "webpack-cli": "^2.0.15",
+    "webpack-dev-server": "^3.1.3"
+  }
+}
