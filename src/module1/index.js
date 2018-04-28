@@ -6,7 +6,7 @@ import AuthRedirectComp from './component/AuthRedirectComp';
 import AuthRedirectComp2 from './component/AuthRedirectComp2';
 import CustomLinkComp from './component/CustomLinkComp';
 
-// import CodeSplitting from '../module2';
+import CodeSplitting from '../module2';
 // import xlsx from '../xlsx';
 
 const BasicExample = () => (
@@ -24,7 +24,7 @@ const BasicExample = () => (
             <Route path={`/auth`} component={AuthRedirectComp}/>
             <Route path={`/auth2`} component={AuthRedirectComp2}/>
             <Route path={`/CustomLinkComp`} component={CustomLinkComp}/>
-            {/*<Route path={`/Loadable`} component={CodeSplitting}/>*/}
+            <Route path={`/Loadable`} component={CodeSplitting}/>
             {/*<Route path={`/xlsx`} component={xlsx}/>*/}
 
             <hr/>
