@@ -173,8 +173,15 @@ yarn add redux react-redux redux-thunk
     
     多参数cb方法改造为单参数方法
         thunk convert
+        tq = tf(arg)
+        tq(cb)
     单参数方法改造为双箭头函数
+        是否合理
+        generator
         fn3(fn2(fn1()))
 
-    fn1()
+        function(){
+
+        }
+
         
