@@ -8,6 +8,8 @@ import CustomLinkComp from './component/CustomLinkComp';
 
 import CodeSplitting from '../module2';
 import xlsx from '../xlsx';
+import ThunkModule from '../thunk-module';
+
 
 const BasicExample = () => (
     <Router>
@@ -19,6 +21,7 @@ const BasicExample = () => (
                 <li><Link to={`/CustomLinkComp`}>CustomLinkComp</Link></li>
                 <li><Link to={`/Loadable`}>Loadable-CodeSplitting</Link></li>
                 <li><Link to={`/xlsx`}>xlsx</Link></li>
+                <li><Link to={`/thunk-module`}>thunk-module-counter</Link></li>
             </ul>
             <Route path={`/regex`} component={RegexComp}/>
             <Route path={`/auth`} component={AuthRedirectComp}/>
@@ -26,6 +29,7 @@ const BasicExample = () => (
             <Route path={`/CustomLinkComp`} component={CustomLinkComp}/>
             <Route path={`/Loadable`} component={CodeSplitting}/>
             <Route path={`/xlsx`} component={xlsx}/>
+            <Route path={`/thunk-module`} component={ThunkModule}/>
 
             <hr/>
 

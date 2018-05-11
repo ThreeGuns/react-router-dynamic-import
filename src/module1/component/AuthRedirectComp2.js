@@ -4,7 +4,8 @@ import {
     Route,
     Link,
     Redirect,
-    withRouter
+    withRouter,
+    Switch
 } from "react-router-dom";
 
 ////////////////////////////////////////////////////////////
@@ -14,7 +15,6 @@ import {
 // 4. Click the back button, note the URL each time
 
 const AuthExample = () => (
-    <Router>
         <div>
             <AuthButton />
             <ul>
@@ -22,14 +22,15 @@ const AuthExample = () => (
                     <Link to="/public">Public Page</Link>
                 </li>
                 <li>
-                    <Link to="/protected">Protected Page</Link>
+                    <Link to="/login">Protected Page</Link>
                 </li>
             </ul>
-            <Route path="/public" component={Public} />
-            <Route path="/login" component={Login} />
-            <PrivateRoute path="/protected" component={Protected} />
+            {/*<Switch>*/}
+                <Route exact path="/public" component={Public} />
+            <Route path="/login" render={() => <div>11111</div>} />
+                {/*<PrivateRoute path="/protected" component={Protected} />*/}
+            {/*</Switch>*/}
         </div>
-    </Router>
 );
 
 const fakeAuth = {
@@ -71,7 +72,7 @@ const PrivateRoute = (props) => (
             ) : (
                 <Redirect
                     to={{
-                        pathname: "/login",
+                        pathname: "/login1112",
                         state: { from: props.location }
                     }}
                 />

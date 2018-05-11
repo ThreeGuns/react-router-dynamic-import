@@ -8,7 +8,6 @@ const auth = {
 class AuthComp extends React.Component{
     render(){
         return (
-            <Router>
             <div>
                 <ul>
                     <li><Link to={`${this.props.match.url}/public`}>public</Link></li>
@@ -16,9 +15,8 @@ class AuthComp extends React.Component{
                 </ul>
                 <hr/>
                 <Route path={`${this.props.match.url}/public`} component={Public}></Route>
-                <PrivateRoute path={`${this.props.match.url}/private`} component={Private}></PrivateRoute>
+                {/*<PrivateRoute path={`${this.props.match.url}/private`} component={Private}></PrivateRoute>*/}
             </div>
-            </Router>
         );
     }
 }
