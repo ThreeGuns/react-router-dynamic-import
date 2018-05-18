@@ -1,7 +1,9 @@
 const path = require('path');
 const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const extractLESS = new ExtractTextPlugin('./dist/style.css');
 
 module.exports = {
     mode: 'development',
@@ -23,6 +25,15 @@ module.exports = {
                 include: /src/,
                 exclude: /node_modules/,
             },
+            {
+                test: /\.less$/i,
+                use: extractLESS.extract([ 'css-loader', 'less-loader' ])
+            },
+            {
+                test: /\.(png|jpg|gif|bmp|svg|ico)$/,
+                exclude: /node_modules/,
+                use: [{loader: 'url-loader'}],
+            }
         ]
     },
     plugins: [
@@ -31,5 +42,6 @@ module.exports = {
             filename: 'index.html',
             template: path.resolve(__dirname, './src/index.html')
         }),
+        extractLESS,
     ]
 };

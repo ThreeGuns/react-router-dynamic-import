@@ -1,0 +1,38 @@
+.progress-download{
+  .outer{
+    position: relative;
+    height: 50px;
+    border: 1px solid gray;
+    .inner{
+      background-color: rgba(0, 0, 0, .3);
+      //position: absolute;
+      width: 20%;
+      height: 50px;
+    }
+    .content{
+      display: flex;
+      display: -webkit-flex;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      .info-center{
+        margin: auto;
+        width: 70%;
+        text-align: left;
+      }
+      .img-left{
+        margin: auto;
+      }
+      .actions{
+        margin: auto;
+        .img-right{
+          width: 2em;
+          margin-left: 1em;
+        }
+      }
+    }
+  }
+}

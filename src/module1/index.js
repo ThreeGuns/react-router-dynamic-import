@@ -9,6 +9,7 @@ import CustomLinkComp from './component/CustomLinkComp';
 import CodeSplitting from '../module2';
 import xlsx from '../xlsx';
 import ThunkModule from '../thunk-module';
+import ProgressModule from '../progress-module';
 
 
 const BasicExample = () => (
@@ -22,6 +23,7 @@ const BasicExample = () => (
                 <li><Link to={`/Loadable`}>Loadable-CodeSplitting</Link></li>
                 <li><Link to={`/xlsx`}>xlsx</Link></li>
                 <li><Link to={`/thunk-module`}>thunk-module-counter</Link></li>
+                <li><Link to={`/progress-module`}>progress-module</Link></li>
             </ul>
             <Route path={`/regex`} component={RegexComp}/>
             <Route path={`/auth`} component={AuthRedirectComp}/>
@@ -30,6 +32,7 @@ const BasicExample = () => (
             <Route path={`/Loadable`} component={CodeSplitting}/>
             <Route path={`/xlsx`} component={xlsx}/>
             <Route path={`/thunk-module`} component={ThunkModule}/>
+            <Route path={`/progress-module`} component={ProgressModule}/>
 
             <hr/>
 
