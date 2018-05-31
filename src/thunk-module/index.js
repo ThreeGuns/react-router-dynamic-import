@@ -5,7 +5,7 @@
 import React from 'react';
 import Loadable from 'react-loadable';
 
-import '../style/index.less';
+
 
 class LoadingComponent extends React.Component{
     render(){

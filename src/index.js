@@ -1,8 +1,9 @@
 import React from 'react';
 import {render} from 'react-dom';
 
+import './style/index.less';
 
-import LinkComp from './module1';
+import LinkComp from './home-module';
 
 // import AsyncComp from './module3';
 // import ListComponent from 'bundle-loader?lazy&name=[name]!./file/List.jsx';

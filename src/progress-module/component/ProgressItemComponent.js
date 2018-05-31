@@ -4,10 +4,10 @@
 
 import React, {Component} from 'react';
 
-import closePng from '../../img/close.png';
-import docxPng from '../../img/docx.png';
-import continuePng from '../../img/download-continue.png';
-import pausePng from '../../img/download-pause.png';
+import closePng from '../../images/close.png';
+import docxPng from '../../images/docx.png';
+import continuePng from '../../images/download-continue.png';
+import pausePng from '../../images/download-pause.png';
 
 class ProgressItemComponent extends Component{
 

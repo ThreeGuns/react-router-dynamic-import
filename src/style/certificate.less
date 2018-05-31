@@ -1,0 +1,749 @@
+#root{
+  border: none; //最新less的bug，
+  .certificate{
+    border: 1px solid #e8e8e8;
+    position: relative;
+    padding-top: 126px;
+    min-height: 300px;
+    .header{
+      height: 60px;
+      //position: absolute;
+      //top: 0;
+      //margin-top: -126px;
+      background-color: #ffd800;
+    }
+    .navbar{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 30px;;
+      line-height: 20px;
+      background-color: #f5f5f5;
+      .left{
+        .oneNav{
+          display: inline-block;
+          i{
+            margin-left: 5px;
+            margin-right: 5px;
+          }
+          &.homeNav{
+            margin-left: 20px;
+            i{
+              margin-left: 0;
+              img{
+
+              }
+            }
+          }
+        }
+      }
+    }
+    .tip{
+      position: relative;
+      padding-bottom: 40px;
+      height: 100%;
+      .tip-content{
+        padding-top: 20px;
+        padding-left: 40px;
+        padding-right: 55px;
+        height: 100%;
+        overflow-y: auto;
+        border-bottom: 1px solid #e8e8e8;
+        h1 {
+          font-size: 250%;
+        }
+        h2 {
+          font-size: 200%;
+          padding-left: 5px;
+        }
+        h3 {
+          font-size: 150%;
+          padding-left: 0px;
+        }
+        h4 {
+          font-size: 100%;
+          padding-left: 0px;
+        }
+        a{
+          color: blue;
+          text-decoration: underline;
+        }
+        p {
+          font-size: 100%;
+          padding-left: 5px;
+          padding-top: 10px;
+          padding-bottom: 20px;
+          line-height: 20px;
+        }
+        .lis{
+          font-size: 100%;
+          padding-left: 5px;
+          padding-top: 10px;
+          padding-bottom: 20px;
+          line-height: 20px;
+          ul{
+            list-style: disc;
+            list-style-position: inside;
+          }
+        }
+        .video-introduction{
+          width: 100px;
+          height: 60px;
+          position: absolute;
+          bottom: 120px;
+          right: 40px;
+          background-color: #ffd800;
+          border-radius: 4px;
+          .video-introduction-action{
+            position: relative;
+            height: 100%;
+            img{
+              width: 60px;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translateX(-50%) translateY(-50%);
+            }
+          }
+          p{
+            text-align: center;
+            padding-top: 5px;
+            padding-bottom: 0;
+            padding-left: 0;
+            padding-right: 0;
+          }
+        }
+      }
+      .bottom{
+        position: absolute;
+        width: 100%;
+        height: 40px;
+        bottom: 0;
+        .current-certificates{
+          position: relative;
+          margin-left: 20px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          height: 100%;
+          a{
+            text-decoration: underline;
+            color: blue;
+          }
+          .action-btn{
+            float: right;
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+    .write-info{
+      position: relative;
+      padding-bottom: 40px;
+      height: 100%;
+      .info-content{
+        padding-top: 20px;
+        padding-left: 40px;
+        padding-right: 55px;
+        height: 100%;
+        overflow-y: auto;
+        border-bottom: 1px solid #e8e8e8;
+        h1 {
+          font-size: 250%;
+        }
+        h2 {
+          font-size: 200%;
+          padding-left: 5px;
+        }
+        h3 {
+          font-size: 150%;
+          padding-left: 0px;
+        }
+        h4 {
+          font-size: 100%;
+          padding-left: 0px;
+        }
+        p {
+          font-size: 100%;
+          padding-left: 5px;
+          padding-top: 10px;
+          padding-bottom: 20px;
+          line-height: 20px;
+          ul{
+            list-style: disc;
+            list-style-position: inside;
+          }
+          a{
+            color: blue;
+            text-decoration: underline;
+          }
+        }
+        .subItem{
+          position: relative;
+          padding-top: 20px;
+          padding-left: 100px;
+          .title{
+            position: absolute;
+            width: 100px;
+            left: 0;
+            &.required:before{
+              color: red;
+              content: '*';
+            }
+          }
+        }
+        .obligee{
+          .obligee-content{
+            .obligee-list{
+              border: 1px solid #e8e8e8;
+              border-radius: 4px;
+              .obligee-list-head{
+                display: flex;
+                height: 30px;
+                align-items: center;
+                background-color: #f4f3f4;
+                border-bottom: 1px solid #e8e8e8;
+                .col1{
+                  padding-left: 20px;
+                  text-align: left;
+                  flex: 2 1 60%;
+                }
+                .col2{
+                  text-align: center;
+                  flex: 1 1 20%;
+                }
+                .col3{
+                  text-align: center;
+                  flex: 1 1 20%;
+                }
+              }
+              .obligee-list-item{
+                display: flex;
+                height: 40px;
+                align-items: center;
+                border-bottom: 1px solid #e8e8e8;
+                &:last-child{
+                  border-bottom: none;
+                }
+                .col1{
+                  padding-left: 20px;
+                  text-align: left;
+                  flex: 2 1 60%;
+                }
+                .col2{
+                  text-align: center;
+                  flex: 1 1 20%;
+                }
+                .col3{
+                  text-align: center;
+                  flex: 1 1 20%;
+                }
+                img{
+                  cursor: pointer;
+                }
+              }
+            }
+            .add-obligee{
+              display: flex;
+              margin-top: 20px;
+              align-items: baseline;
+              button{
+                width: 80px;
+              }
+            }
+          }
+        }
+        .explain{
+          textarea{
+            box-sizing: border-box;
+            padding: 10px;
+            border: 1px solid #e8e8e8;
+            border-radius: 4px;
+            width: 100%;
+            resize: vertical;
+          }
+        }
+        .proof-document{
+          .proof-document-body{
+            .proof-document-content{
+              border: 1px solid #e8e8e8;
+              border-radius: 4px;
+              .item{
+                /*display: inline-block;
+                height: 30px;
+                line-height: 28px;
+                margin: 5px;
+                padding-left: 10px;
+                padding-right: 10px;
+                //border: 1px solid #e8e8e8;
+                border-radius: 4px;
+                img{
+                  margin-left: 5px;
+                  width: 14px;
+                }*/
+                height: 30px;
+                display: inline-flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 5px;
+                padding-left: 10px;
+                padding-right: 10px;
+                border-radius: 4px;
+                label{
+                  display: inline-block;
+                  max-width: 200px;
+                  overflow: hidden;
+                  white-space: nowrap;
+                  text-overflow: ellipsis;
+                }
+                img{
+                  margin-left: 5px;
+                  width: 14px;
+                  cursor: pointer;
+                }
+              }
+              .upload-action{
+                position: relative;
+                border: 1px solid #ffd800;
+                width: 120px;
+                input{
+                  cursor: pointer;
+                  position: absolute;
+                  left: -1PX;
+                  top: -1px;
+                  width: 142px;
+                  height: 32px;
+                  opacity: 0;
+                }
+                img{
+                  vertical-align: inherit;
+                }
+              }
+              .one-proof-document-content{
+                background-color: #ffd800;
+              }
+            }
+          }
+        }
+      }
+      .info-action{
+        margin-left: 40px;
+        margin-right: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        button{
+          width: 80px;
+        }
+      }
+    }
+    .file-list{
+      position: relative;
+      height: 100%;
+      padding-bottom: 40px;
+      .file-list-content{
+        .work-operate {
+          visibility: hidden;
+          display:flex;
+          justify-content:space-around;
+          opacity: 0;
+          .certificate-file-action{
+            cursor: pointer;
+          }
+
+        }
+        thead.ant-table-thead{
+          border-top: 1px solid #e0e0e0;
+          tr{
+            th{
+              padding: 7px 2px;
+              text-align: center !important;
+              border-right: 1px solid #e0e0e0;
+              border-top: 1px solid #e0e0e0;
+              border-bottom: 1px solid #e0e0e0;
+              &:first-child{
+                padding-left: 40px !important;
+              }
+              &:last-child{
+                padding-right: 40px !important;
+                border-right: none;
+              }
+            }
+          }
+        }
+        tr{
+          td{
+            text-align: center;
+            &:first-child{
+              padding-left: 40px !important;
+            }
+            &:last-child{
+              padding-right: 40px !important;
+            }
+          }
+        }
+        .ant-table-thead>tr.ant-table-row-hover>td,
+        .ant-table-tbody>tr.ant-table-row-hover>td,
+        .ant-table-thead>tr:hover>td,
+        .ant-table-tbody>tr:hover .work-operate {
+          visibility: visible;
+          opacity:1
+        }
+      }
+      .file-list-bottom{
+        height: 40px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        border-top: 1px solid #e8e8e8;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding-left: 40px;
+        padding-right: 40px;
+        .left{
+          text-align: left;
+          flex: 1 1 33%;
+          .pre{
+            cursor: pointer;
+          }
+        }
+        .center{
+          flex: 1 1 33%;
+          flex: 1 1 33%;
+          display: flex;
+          justify-content: center;
+          .border-region{
+            width: 80px;
+            height: 30px;
+            position: relative;
+            border: 1px solid #ffd800;
+            border-radius: 4px;
+            .show-to-user-region{
+              height: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            input{
+              position: absolute;
+              left: 0;
+              top: 0;
+              width: 100%;
+              height: 100%;
+              opacity: 0;
+              cursor: pointer;
+            }
+          }
+
+        }
+        .right{
+          text-align: right;
+          flex: 1 1 33%;
+          .add-supplement{
+            text-decoration: underline;
+            cursor: pointer;
+          }
+        }
+      }
+      .certificate-supplement{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        .mask{
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, .3);
+          .certificate-supplement-content{
+            width: 35%;
+            height: 100%;
+            float: right;
+            position: relative;
+            background-color: white;
+            img.action-close{
+              position: absolute;
+              top: 10px;
+              right: 10px;
+              width: 20px;
+              cursor: pointer;
+            }
+            .certificate-supplement-body{
+              margin-top: 40px;
+              margin-left: 40px;
+              margin-right: 40px;
+              text-align: center;
+              h5{
+                font-size: 1.5em;
+              }
+              .certificate-supplement-body-item{
+                margin-top: 30px;
+                &.describe{
+                  line-height: 15px;
+                }
+                &.upload-region{
+                  position: relative;
+                  display: inline-block;
+                  border: 1px dashed #e0e0e0;
+                  border-radius: 4px;
+                  padding: 20px;
+                  input{
+                    cursor: pointer;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                  }
+                }
+                .download-template-link{
+                  cursor: pointer;
+                  margin-left: 20px;
+                  a{
+                    margin-left: 10px;
+                    color: #2d5b8e;
+                    text-decoration: underline;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .mission{
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border-bottom: 40px solid;
+      .left{
+        background-color: #f4f3f4;
+        position: absolute;
+        float: left;
+        width: 20%;
+        height: 100%;
+        .tab{
+          position: relative;
+          &.selected{
+            background-color: #e8e8e8;
+          }
+          .content{
+            margin-left: 20px;
+            display: inline-block;
+            height: 60px;
+            line-height: 60px;
+            img{
+
+            }
+            .label{
+              margin-left: 10px;
+            }
+            .running-task-number{
+              display: inline-block;
+              margin-left: 40px;
+              text-align: center;
+              background: yellow;
+              width: 20px;
+              height: 20px;
+              /* border: 1px solid red; */
+              line-height: 20px;
+              border-radius: 50%;
+            }
+          }
+        }
+        .info-link{
+          position: absolute;
+          bottom: 40px;
+          left: 0;
+          right: 0;
+          a{
+            display: block;
+            text-align: center;
+            text-decoration: underline;
+            color: blue;
+          }
+        }
+      }
+      .center{
+        float: right;
+        width: 80%;
+        height: 100%;
+        .certificate-mission-list{
+          position: relative;
+          height: 100%;
+          padding-top: 60px;
+          .certificate-mission-list-header{
+            position: absolute;
+            margin-top: -60px;
+            width: 100%;
+            height: 60px;
+            .vertical-middle{
+              position: relative;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              height: 100%;
+              .margin-left-10{
+                margin-left: 10px;
+              }
+              .margin-left-20{
+                margin-left: 20px;
+              }
+              .done-clear-btn{
+                float: right;
+                margin-right: 20px;
+              }
+              .fail-clear-btn{
+                float: right;
+                margin-right: 20px;
+              }
+              .certificating-total-action{
+                display: inline-block;
+                margin-right: 20px;
+              }
+              .certificate-fail-tips{
+                display: inline-block;
+                .certificate-fail-tips-action{
+                  margin-top: 5px;
+                  a{
+                    text-decoration: underline;
+                  }
+                }
+              }
+              .total-progress-bar-outer{
+                height: 5px;
+                display: inline-block;
+                width: 35%;
+                border-radius: 4px;
+                background-color: #e8e8e8;
+                position: relative;
+                .total-progress-bar-inner{
+                  background-color: yellow;
+                  height: 100%;
+                  border-radius: 4px;
+                }
+              }
+              button{
+                width: 80px;
+              }
+            }
+          }
+          .certificate-mission-list-content{
+            height: 100%;
+            overflow-y: auto;
+            margin-right: -15px;
+            .list{
+              border-top: 1px solid #e8e8e8;
+              .item{
+                height: 60px;
+                border-bottom: 1px solid #e8e8e8;
+                .vertical-middle{
+                  position: relative;
+                  display: flex;
+                  align-items: center;
+                  height: 100%;
+                  .margin-left-10{
+                    margin-left: 10px;
+                  }
+                  .margin-left-20{
+                    margin-left: 20px;
+                  }
+                  .col1{
+                    display: inline-block;
+                    width: 30%;
+                    text-align: left;
+                    img{
+                      vertical-align: inherit;
+                    }
+                    .name{
+                      width: 70%;
+                      display: inline-block;
+                      overflow: hidden;
+                      white-space: nowrap;
+                      text-overflow: ellipsis;
+                    }
+                  }
+                  .col2{
+                    display: inline-block;
+                    width: 20%;
+                    text-align: center;
+                    .current-amount-and-total{
+
+                    }
+                  }
+                  .col3{
+                    display: inline-block;
+                    width: 30%;
+                    text-align: center;
+                    .one-progress-bar-outer{
+                      width: 80%;
+                      height: 3px;
+                      display: inline-block;
+                      border-radius: 4px;
+                      background-color: #e8e8e8;
+                      position: relative;
+                      .one-progress-bar-inner{
+                        background-color: yellow;
+                        height: 100%;
+                        border-radius: 4px;
+                      }
+                      .one-progress-bar-info{
+                        margin-top: 2px;
+                      }
+                    }
+                    img{
+                      width: 1em;
+                      margin-right: 10px;
+                    }
+                  }
+                  .col4{
+                    display: inline-block;
+                    width: 20%;
+                    text-align: center;
+                    .actions{
+                      img{
+                        margin-left: 10px;
+                        margin-right: 10px;
+                        width: 1em;
+                        height: 1em;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .bottom{
+        position: absolute;
+        width: 100%;
+        height: 40px;
+        bottom: -40px;
+        //margin-bottom: -40px;
+        background-color: white;
+        .current-certificates{
+          position: relative;
+          display: flex;
+          align-items: center;
+          height: 100%;
+          justify-content: space-between;
+          margin-left: 20px;
+          a{
+            text-decoration: underline;
+            color: blue;
+          }
+          .action-btn{
+            float: right;
+            //margin-top: -10px;
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+  }
+}

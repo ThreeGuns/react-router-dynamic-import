@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import {HashRouter as Router, Route, Link} from 'react-router-dom';
 
 import RegexComp from './component/RegexComp';
 import AuthRedirectComp from './component/AuthRedirectComp';
@@ -10,12 +10,18 @@ import CodeSplitting from '../module2';
 import xlsx from '../xlsx';
 import ThunkModule from '../thunk-module';
 import ProgressModule from '../progress-module';
+import CertificateModule from '../certificate';
+
 
 
 const BasicExample = () => (
     <Router>
         <div>
             <ul>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/article">Article</Link></li>
+                <li><Link to="/about">About</Link></li>
+                <li><Link to="/topics">Topics</Link></li>
                 <li><Link to={`/regex`}>Regex</Link></li>
                 <li><Link to={`/auth`}>AuthComp</Link></li>
                 <li><Link to={`/auth2`}>AuthComp2</Link></li>
@@ -24,7 +30,12 @@ const BasicExample = () => (
                 <li><Link to={`/xlsx`}>xlsx</Link></li>
                 <li><Link to={`/thunk-module`}>thunk-module-counter</Link></li>
                 <li><Link to={`/progress-module`}>progress-module</Link></li>
+                <li><Link to={`/certificate`}>CertificateModule</Link></li>
             </ul>
+            <Route exact path="/" component={Home} />
+            <Route path="/article" component={Article} />
+            <Route path="/about" component={About} />
+            <Route path="/topics" component={Topics} />
             <Route path={`/regex`} component={RegexComp}/>
             <Route path={`/auth`} component={AuthRedirectComp}/>
             <Route path={`/auth2`} component={AuthRedirectComp2}/>
@@ -33,20 +44,8 @@ const BasicExample = () => (
             <Route path={`/xlsx`} component={xlsx}/>
             <Route path={`/thunk-module`} component={ThunkModule}/>
             <Route path={`/progress-module`} component={ProgressModule}/>
+            <Route path={`/certificate`} component={CertificateModule}/>
 
-            <hr/>
-
-            <ul>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/article">Article</Link></li>
-                <li><Link to="/about">About</Link></li>
-                <li><Link to="/topics">Topics</Link></li>
-            </ul>
-            <hr/>
-            <Route exact path="/" component={Home} />
-            <Route path="/article" component={Article} />
-            <Route path="/about" component={About} />
-            <Route path="/topics" component={Topics} />
         </div>
     </Router>
 );

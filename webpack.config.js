@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const extractLESS = new ExtractTextPlugin('./dist/style.css');
+const extractLESS = new ExtractTextPlugin('./style/index.css');
 
 module.exports = {
     mode: 'development',
@@ -20,7 +20,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.js$/i,
                 use: [{loader: 'babel-loader'}],
                 include: /src/,
                 exclude: /node_modules/,
@@ -30,7 +30,7 @@ module.exports = {
                 use: extractLESS.extract([ 'css-loader', 'less-loader' ])
             },
             {
-                test: /\.(png|jpg|gif|bmp|svg|ico)$/,
+                test: /\.(png|jpg|gif|bmp|svg|ico)$/i,
                 exclude: /node_modules/,
                 use: [{loader: 'url-loader'}],
             }
@@ -43,5 +43,22 @@ module.exports = {
             template: path.resolve(__dirname, './src/index.html')
         }),
         extractLESS,
-    ]
+    ],
+    devServer: {
+        inline: true,
+        contentBase: path.join(__dirname, "public"),
+        compress: false,
+        port: 9000,
+        after(app){
+            console.log('app start done!');
+        },
+        before(app){
+            app.get('/test', (req, res) => {
+                res.json({a: 2});
+            });
+        },
+        index: 'index.html',
+        open: true,
+        progress: true,
+    }
 };

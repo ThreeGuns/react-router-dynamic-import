@@ -78,11 +78,11 @@ module.exports = {
 
 [react-router github](https://github.com/ReactTraining/react-router) 
 
-![](./images/1.png)
+![](./readme-images/1.png)
 
 [reacttraining react-router 文档](https://reacttraining.com/react-router/) 
 
-![](./images/2.png)
+![](./readme-images/2.png)
 
 对于异步加载，文档里面给出的解决方案叫`Code Splitting`
 
@@ -165,7 +165,7 @@ Like the existing JavaScript module specification, the exact mechanism for retri
 </script>
 ```
 
-![](./images/3.png)
+![](./readme-images/3.png)
 
 详见[The TC39 Process](https://tc39.github.io/process-document/)
 
@@ -287,7 +287,7 @@ splitChunks: {
 
 5. 设置项目录如下，入口文件为`src/index.js`
 	
-	![](./images/4.png)
+	![](./readme-images/4.png)
 	
 6. 	配置webpack (根目录下webpack.config.js)
 	
@@ -346,11 +346,11 @@ splitChunks: {
 	
 9. 	访问。显示一个正常的react-router控制app
 
-	![](./images/5.png)
+	![](./readme-images/5.png)
 	
 10. 添加一个dynamic import module --> module2
 
-	![](./images/6.png)
+	![](./readme-images/6.png)
 	
 	`index.js`
 	```
@@ -394,11 +394,11 @@ splitChunks: {
 	
 12. 再查看页面	
 	
-	![](./images/7.png)
+	![](./readme-images/7.png)
 	
 13. 点击 `Loadable-CodeSplitting` 链接
 
-	![](./images/8.png)
+	![](./readme-images/8.png)
 	
 	可以看到其在点击之后，才加载 `0.0.js`
 	
@@ -410,19 +410,19 @@ splitChunks: {
 	npm start
 	```
 	
-	![](./images/9.png)
+	![](./readme-images/9.png)
 	
 	可以看到实际打包的结果，确实如此
 	
 15. 然后就能以模块的形式去开发前端代码了。比如再添加一个`xlsx`模块
 
-	![](./images/10.png)
+	![](./readme-images/10.png)
 	
-	![](./images/11.png)
+	![](./readme-images/11.png)
 	
-	![](./images/12.png)
+	![](./readme-images/12.png)
 	
-	![](./images/13.png)
+	![](./readme-images/13.png)
 	
 --------------------------
 
