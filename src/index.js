@@ -3,24 +3,13 @@ import {render} from 'react-dom';
 
 import './style/index.less';
 
-import LinkComp from './home-module';
+import HomeComp from './home-module';
 
-// import AsyncComp from './module3';
-// import ListComponent from 'bundle-loader?lazy&name=[name]!./file/List.jsx';
-
-
-
-class Comp1 extends React.Component{
-    render(){
-        return (
-            <div>
-                <LinkComp/>
-                {/*<AsyncComp/>*/}
-            </div>
-        );
-    }
+if (process.env.NODE_ENV !== 'production') {
+    const {whyDidYouUpdate} = require('why-did-you-update');
+    whyDidYouUpdate(React, {exclude: [/^(Connect|Route|Router|Link)/] });
 }
 
-render(<Comp1/>, document.getElementById('root'));
+render(<HomeComp/>, document.getElementById('root'));
 
 
