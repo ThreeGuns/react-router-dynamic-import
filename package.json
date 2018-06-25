@@ -4,9 +4,10 @@
   "description": "dynamic import test",
   "main": "./src/index.js",
   "scripts": {
-    "test": "mocha",
+    "test": "jest",
     "dev": "webpack-dev-server",
-    "start": "rimraf dist && webpack"
+    "start": "rimraf dist && webpack",
+    "test:watch": "npm test -- --watch"
   },
   "repository": {
     "type": "git",
@@ -27,12 +28,36 @@
   "homepage": "https://github.com/ThreeGuns/react-router-dynamic-import#readme",
   "babel": {
     "presets": [
+      "env",
       "react",
       "stage-0"
     ],
     "plugins": [
       "syntax-dynamic-import"
     ]
+  },
+  "jest": {
+    "verbose": true,
+    "testMatch": [
+      "**/test/**/*.test.js?(x)"
+    ],
+    "collectCoverageFrom": [
+      "src/jest-module/**/*.{js,jsx}",
+      "!**/coverage/**",
+      "!**/dist/**",
+      "!**/store.js",
+      "!**/provider.jsx",
+      "!**/index.js",
+      "!**/webpack.config.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 95,
+        "functions": 95,
+        "lines": 95,
+        "statements": 95
+      }
+    }
   },
   "dependencies": {
     "antd": "^3.5.4",
@@ -54,15 +79,20 @@
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
-    "babel-preset-env": "^1.6.1",
+    "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "css-loader": "^0.28.11",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "html-webpack-plugin": "^3.2.0",
+    "jest": "^23.1.0",
     "less": "^3.0.4",
     "less-loader": "^4.1.0",
+    "react-test-renderer": "^16.4.1",
     "redux-devtools-extension": "^2.13.2",
+    "redux-mock-store": "^1.5.3",
     "rimraf": "^2.6.2",
     "style-loader": "^0.21.0",
     "webpack": "^4.6.0",

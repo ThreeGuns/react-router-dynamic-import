@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`jest-module test 1`] = `
+<div>
+  this is pure component for jest
+</div>
+`;
+
+exports[`jest-module test 2`] = `
+<div
+  className="jest-module"
+>
+  <div>
+    <button
+      id="btn-add"
+      onClick={[Function]}
+    >
+      click me to add
+    </button>
+    <button
+      id="btn-reduce"
+      onClick={[Function]}
+    >
+      click me to reduce
+    </button>
+    <label
+      id="cnt"
+    >
+      0
+    </label>
+  </div>
+  <div>
+    <a
+      id="footer-a"
+      onClick={[Function]}
+    >
+      click footer to back
+    </a>
+  </div>
+</div>
+`;

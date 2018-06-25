@@ -12,6 +12,7 @@ import ThunkModule from '../thunk-module';
 import ProgressModule from '../progress-module';
 import CertificateModule from '../certificate';
 import ReactReRenderTestModule from '../react-re-render-test-module';
+import JestModule from '../jest-module';
 
 class HomeComponent extends Component{
     componentDidMount(){
@@ -40,7 +41,7 @@ class HomeComponent extends Component{
                         <li><Link to={`/thunk-module`}>thunk-module-counter</Link></li>
                         <li><Link to={`/progress-module`}>progress-module</Link></li>
                         <li><Link to={`/certificate`}>CertificateModule</Link></li>
-                        <li><Link to={`/react-re-render-test`}>react-re-render-test-module</Link></li>
+                        <li><Link to={`/jest-module`}>jest-module</Link></li>
                     </ul>
                     <Route exact path="/" component={Home} />
                     <Route path="/topics" component={TopicsRoute} />
@@ -54,6 +55,7 @@ class HomeComponent extends Component{
                     <Route path={`/progress-module`} component={ProgressModule}/>
                     <Route path={`/certificate`} component={CertificateModule}/>
                     <Route path={`/react-re-render-test`} component={ReactReRenderTestModule}/>
+                    <Route path={`/jest-module`} component={JestModule}/>
                 </div>
             </Router>
         );
