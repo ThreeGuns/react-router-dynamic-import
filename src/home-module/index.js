@@ -13,6 +13,7 @@ import ProgressModule from '../progress-module';
 import CertificateModule from '../certificate';
 import ReactReRenderTestModule from '../react-re-render-test-module';
 import RxjsModule from '../rxjs-module';
+import JestModule from '../jest-module';
 
 class HomeComponent extends Component{
     componentDidMount(){
@@ -43,6 +44,7 @@ class HomeComponent extends Component{
                         <li><Link to={`/certificate`}>CertificateModule</Link></li>
                         <li><Link to={`/react-re-render-test`}>react-re-render-test-module</Link></li>
                         <li><Link to={`/rxjs-module`}>rxjs-module</Link></li>
+                        <li><Link to={`/jest-module`}>jest-module</Link></li>
                     </ul>
                     <Route exact path="/" component={Home} />
                     <Route path="/topics" component={TopicsRoute} />
@@ -57,6 +59,7 @@ class HomeComponent extends Component{
                     <Route path={`/certificate`} component={CertificateModule}/>
                     <Route path={`/react-re-render-test`} component={ReactReRenderTestModule}/>
                     <Route path={`/rxjs-module`} component={RxjsModule}/>
+                    <Route path={`/jest-module`} component={JestModule}/>
                 </div>
             </Router>
         );
