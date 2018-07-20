@@ -63,6 +63,7 @@
     "antd": "^3.5.4",
     "jszip": "^3.1.5",
     "react": "^16.3.2",
+    "react-custom-scrollbars": "^4.2.1",
     "react-dom": "^16.3.2",
     "react-loadable": "^5.3.1",
     "react-redux": "^5.0.7",

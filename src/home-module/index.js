@@ -14,6 +14,7 @@ import CertificateModule from '../certificate';
 import ReactReRenderTestModule from '../react-re-render-test-module';
 import RxjsModule from '../rxjs-module';
 import JestModule from '../jest-module';
+import messageNotifyModule from '../message-notify-module';
 
 class HomeComponent extends Component{
     componentDidMount(){
@@ -45,6 +46,7 @@ class HomeComponent extends Component{
                         <li><Link to={`/react-re-render-test`}>react-re-render-test-module</Link></li>
                         <li><Link to={`/rxjs-module`}>rxjs-module</Link></li>
                         <li><Link to={`/jest-module`}>jest-module</Link></li>
+                        <li><Link to={`/message-notify-module`}>message-notify-module</Link></li>
                     </ul>
                     <Route exact path="/" component={Home} />
                     <Route path="/topics" component={TopicsRoute} />
@@ -60,6 +62,7 @@ class HomeComponent extends Component{
                     <Route path={`/react-re-render-test`} component={ReactReRenderTestModule}/>
                     <Route path={`/rxjs-module`} component={RxjsModule}/>
                     <Route path={`/jest-module`} component={JestModule}/>
+                    <Route path={`/message-notify-module`} component={messageNotifyModule}/>
                 </div>
             </Router>
         );
