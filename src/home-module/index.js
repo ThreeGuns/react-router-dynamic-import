@@ -41,12 +41,12 @@ class HomeComponent extends Component{
                         <li><Link to={`/Loadable`}>Loadable-CodeSplitting</Link></li>
                         <li><Link to={`/xlsx`}>xlsx</Link></li>
                         <li><Link to={`/thunk-module`}>thunk-module-counter</Link></li>
-                        <li><Link to={`/progress-module`}>progress-module</Link></li>
+                        <li><Link id="progress-module" to={`/progress-module`}>progress-module</Link></li>
                         <li><Link to={`/certificate`}>CertificateModule</Link></li>
                         <li><Link to={`/react-re-render-test`}>react-re-render-test-module</Link></li>
                         <li><Link to={`/rxjs-module`}>rxjs-module</Link></li>
                         <li><Link to={`/jest-module`}>jest-module</Link></li>
-                        <li><Link to={`/message-notify-module`}>message-notify-module</Link></li>
+                        <li><Link id="message-notify-module" to={`/message-notify-module`}>message-notify-module</Link></li>
                     </ul>
                     <Route exact path="/" component={Home} />
                     <Route path="/topics" component={TopicsRoute} />
