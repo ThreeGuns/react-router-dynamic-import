@@ -92,6 +92,7 @@
     "jest": "^23.1.0",
     "less": "^3.0.4",
     "less-loader": "^4.1.0",
+    "nodegit": "^0.22.2",
     "react-test-renderer": "^16.4.1",
     "redux-devtools-extension": "^2.13.2",
     "redux-mock-store": "^1.5.3",

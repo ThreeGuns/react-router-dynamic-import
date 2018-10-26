@@ -51,7 +51,9 @@ class PerfTestReduxContainer extends Component {
                 <button onClick={() => {resetMultiplier(2)}}>Click Me 2</button>
                 <ul>
                     {
+                        /*和注释掉的代码比较，两者的渲染时间差距非常明显*/
                         this.arr.map((one, i) => <ItemComponent key={i} text={i+multiplier}/>)
+                        /*this.arr.map((one, i) => <ItemComponent key={i} text={i+multiplier}/>)*/
                     }
                 </ul>
             </div>
