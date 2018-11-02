@@ -33,7 +33,7 @@ class Pool extends EventEmitter{
         this.on('flush', (flushData, whenFlush) => {
             if(flushData){
                 this.addList.push({...flushData, whenFlush});
-                console.log(`addList ++ ${this.addList.length}`);
+                timer(`addList ++ ${this.addList.length}`);
             }
             while(this.locks.length < 1 && this.addList.length > 0){
                 const newData = this.addList.shift();
@@ -80,11 +80,20 @@ function fib(n){
 }
 
 const test = new Test();
-timer(`begin`);
-for(let i = 0; i < 3; i++){
-    test.emit('event', {cacheKey: i+'_a'});
-}
-timer(`loop end`);
+const path = require('path');
+const child_process = require('child_process');
+
+const child_proc = child_process.fork(path.resolve(__dirname, '../child_process/fork/fork-invoke'));
+child_proc.on('message', function(msg) {
+    switch(msg.event){
+        case 'fib-done':
+            fib(1);
+            test.emit('event', {cacheKey: msg.data + '_a'});
+            break;
+        default:
+            break;
+    }
+});
 setInterval(() => {
     fib(1);
     console.log('i am render process');
