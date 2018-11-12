@@ -3,8 +3,11 @@ const a = 1;
 switch (a) {
     case 1:
         console.log('1');
+        break;
     case 2:
         console.log('2');
+    default:
+        console.log('0');
 
 }
 const events = require('events');
@@ -28,14 +31,3 @@ aa.emit('a', 'data2');
 aa.removeAllListeners('a');
 
 aa.emit('a', 'data3');
-
-db.t2.aggregate([{$group: {"_id": {"country": "$country", "province": "$province", "uid": "$userid"}}}])
-
-db.t2.aggregate([
-        {$group:
-                {
-                    "_id": {"country": "$country", "prov": "$province"},
-                    "number": {$sum: 1}
-                }
-        }
-    ]);
